@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("cat+flag.txt")
+        cmd := exec.Command("cat<flag.txt")
         output, err := cmd.Output()
         if err != nil {
             fmt.Println("Erro ao executar o comando id:", err)
