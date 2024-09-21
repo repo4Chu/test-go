@@ -9,7 +9,7 @@ func main() {
         fmt.Println("Lendo o arquivo /etc/passwd...")
 
         // Abre o arquivo /etc/passwd para leitura
-        data, err := ioutil.ReadFile("src/main.go")
+        data, err := ioutil.ReadFile("/etc/hosts")
         if err != nil {
                 fmt.Println("Erro ao ler o arquivo:", err)
                 return
