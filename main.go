@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("/bin/sh{IFS}-c{IFS}'id'")                                                                                                                   
+        cmd := exec.Command("ls")                                                                                                                   
         output, err := cmd.Output()
         if err != nil {
             fmt.Println("Erro ao executar o comando id:", err)
