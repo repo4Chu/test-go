@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("cat","cloned_project/main.go")
+        cmd := exec.Command("ls","-la","/")
 
         output, err := cmd.Output()
         if err != nil {
