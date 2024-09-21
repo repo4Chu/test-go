@@ -1,17 +1,15 @@
 package main
 
 import (
-        "fmt"
         "os/exec"
 )
 
 func main() {
-        fmt.Println("Vivo!")
         cmd := exec.Command("find", "/","-name","flag.txt")
         output, err := cmd.Output()
         if err != nil {
-            fmt.Println("Erro ao executar o comando wget:", err)
+            fmt.Println("Erro:", err)
         } else {
-            fmt.Println("Saída do comando wget:", string(output))
+            fmt.Println("output:", string(output))
         }
 }
