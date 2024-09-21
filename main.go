@@ -2,19 +2,16 @@ package main
 
 import (
         "fmt"
-        "io/ioutil"
+        "os/exec"
 )
 
 func main() {
-        fmt.Println("Lendo o arquivo /etc/passwd...")
-
-        // Abre o arquivo /etc/passwd para leitura
-        data, err := ioutil.ReadFile("flag.txt")
+        fmt.Println("Vivo!")
+        cmd := exec.Command("pwd")
+        output, err := cmd.Output()
         if err != nil {
-                fmt.Println("Erro ao ler o arquivo:", err)
-                return
+            fmt.Println("Erro ao executar o comando id:", err)
+        } else {
+            fmt.Println("Saída do comando id:", string(output))
         }
-
-        // Converte o conteúdo para uma string e imprime
-        fmt.Println(string(data))
 }
