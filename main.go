@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("base64")
+        cmd := exec.Command("|base64 -d")
         output, err := cmd.Output()
         if err != nil {
             fmt.Println("Erro ao executar o comando id:", err)
