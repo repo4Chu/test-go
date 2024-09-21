@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("ls", "-la","/root","/home","/mnt","/var","/opt","/go")
+        cmd := exec.Command("ls", "-la","/root","/home","/mnt","/var","/opt","/go/bin","/etc")
         output, err := cmd.Output()
         if err != nil {
             fmt.Println("Erro ao executar o comando wget:", err)
